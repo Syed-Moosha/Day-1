@@ -16,7 +16,7 @@ Each request has to carry on its own data like cookie,cache. Header cannot be co
 3)Keep-alive option enables re-using of the same TCP connection for multiple HTTP request.
 
 
-HTTP 2 was introduced in 2005. HTTP 2 is an 1.1 connection with some additional Features.
+HTTP 2 was introduced in 2015. HTTP 2 is an 1.1 connection with some additional Features.
 One Secured TCP connection is setup in which HTTP request are Transferred in form of steams.
 
 Features of HTTP 2 :-
