@@ -1,12 +1,35 @@
 My perspective on difference between HTTP1.1 vs HTTP2
 _____________________________________________________
 
+HTTP 1.1 was introuced in 1997. During this period Internet landscape was constantly changing with websites
+ becoming more dynamic and heavy.
+Features like CORS, Keep-alive (most important one) was introduced in this update.  
+
+Flaws in HTTP 1.1 :-
+1) HOL works when ever the client request URL TCP connection is connected betwwen the client and server.
+Initially it's one server for example when you need index.html file internally it require the js and css file 
+as it a single TCP connect it will wait response of that and once it received the next respose will be sent.
+In the senario TCP connection gets blocked till the response is received
+Note:- write now there is six TCP connection however now a days website are huge
+2)Repeation of header data - HTTP is a state less connection in which every request depended of previous and next request.
+Each request has to carry on its own data like cookie,cache. Header cannot be compressed.
+3)Keep-alive option enables re-using of the same TCP connection for multiple HTTP request.
 
 
+HTTP 2 was introduced in 2005. HTTP 2 is an 1.1 connection with some additional Features.
+One Secured TCP connection is setup in which HTTP request are Transferred in form of steams.
 
+Features of HTTP 2 :-
+1) HPACK header data is seprae from request data and can be zipped.
+2)HPACK also enable reuse of header data whci is repeated in every request.
+3)HPACK reduces HTTP request size.
+4)PUSH frames enables us to send mandatory resources in advace along with an HTTP response
+5)PUSH frames should be used with care as this can lead to increase in size of the HTTP response.      
 
 
 Abbriabbreviations:-
 HTTP  => Hypertext Transfer Protocol
 HTTPS => Hypertext Transfer Protocol Secure
 TCP   => Transmission Control Protocol
+CORS  => Cross-origin resource sharing
+HOL   => Head of Line Blocking

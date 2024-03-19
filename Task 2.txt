@@ -1,0 +1,45 @@
+My perspective on Objects and its internal representation in javascript
+_______________________________________________________________________
+
+Objects are important data types in javascript.
+It is used to store various keyed collections and more complex entities.
+These keys can be variables or functions and are called properties and methods, respectively, in the context of an object.
+Objects can be created using the Object() constructor or the object initializer / literal syntax.
+Every object has some property associated with some value. 
+These values can be accessed using these properties associated with them.
+
+Example:-
+
+var mymobile = new Object();
+mymobile.launchdate ='2016, Sep 07';
+mymobile.display = 'LCD';
+mymobile.os = "Android 7";
+mymobile.ram = "4GB";
+mymobile.battery = "3200 mAh";
+
+
+After creating mymobile object, the value inside the object can be accessed using keys.
+
+i.e.
+console.log(mymobile.battery);
+
+output:-
+3200 mAh
+
+
+The syntax for adding a property to an object is :
+
+ObjectName.ObjectProperty = propertyValue;
+
+The syntax for deleting a property from an object is:
+
+delete ObjectName.ObjectProperty;
+
+The syntax to access a property from an object is:
+
+objectName.property        
+           //or
+objectName["property”]     
+           //or
+objectName[expression]
+
