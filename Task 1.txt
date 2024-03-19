@@ -1,0 +1,12 @@
+My perspective on difference between HTTP1.1 vs HTTP2
+_____________________________________________________
+
+
+
+
+
+
+Abbriabbreviations:-
+HTTP  => Hypertext Transfer Protocol
+HTTPS => Hypertext Transfer Protocol Secure
+TCP   => Transmission Control Protocol
